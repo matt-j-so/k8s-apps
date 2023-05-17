@@ -5,4 +5,4 @@ appVersion: 1.0.0
 dependencies:
   - name: postgresql
     version: 12.5.2
-    repository: oci://core.harbor.domain/my-helm-repo/postgresql
+    repository: oci://core.harbor.domain/my-helm-repo/
