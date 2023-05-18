@@ -2,3 +2,6 @@ cockroachdb:
   statefulset:
     replicas: 2
     topologySpreadConstraints: {}
+    
+tls:
+  enabled: false
