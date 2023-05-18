@@ -1,7 +1,17 @@
 cockroachdb:
+  conf:
+    useHostLocality:
+      enabled: true
+
   statefulset:
-    replicas: 3
-    topologySpreadConstraints: {}
-    
-tls:
-  enabled: false
+    serviceAccount:
+      create: true
+      name: cockroachdb
+  service:
+    public:
+      type: LoadBalancer
+      annotations:
+        cloud.google.com/load-balancer-type: Internal
+  init:
+    jobAnnotations:
+      argocd.argoproj.io/hook: Sync
