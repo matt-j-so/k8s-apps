@@ -4,6 +4,7 @@ cockroachdb:
       enabled: true
 
   statefulset:
+    replicas: 2
     serviceAccount:
       create: true
       name: cockroachdb
